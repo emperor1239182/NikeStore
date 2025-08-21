@@ -1,10 +1,45 @@
 @import "tailwindcss";
-
-@layer base{
-    .navList{
-        @apply flex flex-col items-center justify-center text-[10px] text-gray-500 font-bold
-    }
-    .menu{
-        @apply p-3 rounded-4xl bg-red-200
-    }
-}
+ @layer base{
+   .menu{
+     @apply
+      p-3
+      sm:p-8
+      rounded-4xl
+      sm:rounded-none
+      bg-red-200 
+      fixed 
+      bottom-3 
+      sm:left-0 
+      w-full 
+      sm:w-auto 
+      sm:h-[100vh] 
+      mt-10 
+    } 
+    .navListContainer{
+       @apply 
+       flex 
+       justify-around 
+       sm:flex-col 
+       sm:justify-between 
+       sm:gap-5 
+      } 
+      .navList{ 
+        @apply 
+        flex 
+        flex-col 
+        sm:flex-row 
+        items-center 
+        justify-center 
+        sm:justify-normal 
+        sm:gap-4 
+        text-[10px] 
+        sm:text-xl 
+        text-gray-500 
+        font-bold 
+      } 
+      .listText{
+         @apply 
+         sm:hidden
+         lg:block
+        } 
+      }
